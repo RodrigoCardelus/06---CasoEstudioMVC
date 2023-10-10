@@ -1,0 +1,43 @@
+﻿@model Sitio.Models.Articulo
+
+@{
+    ViewBag.Title = "FormArticuloConsultar";
+}
+
+<h2>Consultar un Articulo</h2>
+
+@ViewBag.Mensaje
+
+<div
+    <dl class="dl-horizontal">
+        @Html.ActionLink("Volver a Listado", "FormArticuloListar")
+         <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Consultar", "Consultar", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Volver al Listado", "FormArticuloListar")
+</p>

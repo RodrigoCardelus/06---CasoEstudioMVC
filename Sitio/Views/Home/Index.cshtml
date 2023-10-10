@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2> @*titulo tamañalo 1 al 5 mas grande*@
+
+<div>
+      @Html.ActionLink("Logueo", "FormLogueo")
+</div>
+
+<h2> Ingreso al Sistema </h2>
+
+<div class="form-horizontal ">
+    <h4> Ingrese datos para Logueo </h4>
+    <hr />
+
+</div>
+
+<table>
+    <tr>
+      <td>
+          <td> @Html.ActionLink("-- Listado Articulos -- ", "FormArticulosListar",
+                           "Articulos", new {area = ""}, new {@class = "navbar-brand"}) </td>
+       <td>
+        @Html.ActionLink("-- Crear Factura  -- ", "FormFacturaAlta",
+                           "Facturas", new { area = "" }, new { @class = "navbar-brand" })
+       </td>
+
+    <td>
+        @Html.ActionLink("-- Listar Facturas -- ", "FormFacturasListar",
+                           "Facturas", new { area = "" }, new { @class = "navbar-brand" })
+    </td>
+      </tr>
+
+    <div>
+        <br  />
+        @ViewBag.Mensaje
+    </div>
+
+</table>
